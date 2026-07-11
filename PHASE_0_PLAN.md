@@ -72,7 +72,7 @@ verification command on every initially supported host OS.
 
 ## Current Deliverable
 
-Deliverable 2: strict analyzer configuration is complete.
+Deliverable 3: file-length checker and fixture tests are complete.
 
 ## Deliverable 2 Acceptance Criteria
 
@@ -86,4 +86,25 @@ Deliverable 2: strict analyzer configuration is complete.
 
 ## Next Deliverable
 
-Deliverable 3: file-length checker and fixture test.
+Deliverable 4: root verification runner with honest skip reporting.
+
+## Deliverable 3 Acceptance Criteria
+
+- `tool/check_file_length.dart` recursively scans applicable files.
+- Handwritten applicable files fail only above 80 physical lines.
+- Markdown and `pubspec.lock` are excluded by documented policy.
+- Generated files are exempt only under `generated/` with the canonical header:
+  `// GENERATED CODE - DARTML FILE LENGTH EXEMPTION`, `// DO NOT EDIT.`, and
+  `// Generated from: <path>`.
+- Generated provenance must point to an existing regular generator file under
+  `tool/generators/` or `packages/<package>/tool/generators/`.
+- Generated provenance may not use absolute paths, Windows drive paths, `..`,
+  self-reference, arbitrary repository files, or symlinks outside the repo.
+- Top-level cache, build, Git, IDE, package output, and temp dirs are excluded.
+- Nested project directories named `tmp`, `temp`, `cache`, or `build` remain
+  scanned unless they match the documented top-level or metadata policy.
+- Violations are reported deterministically with path, count, and max.
+- Directory traversal errors are reported deterministically and make the
+  checker fail without aborting independent scanning.
+- Spaces, non-ASCII paths, line endings, invalid text, traversal errors,
+  symlink handling, and real-repository checks are tested.

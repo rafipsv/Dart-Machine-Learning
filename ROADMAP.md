@@ -31,7 +31,10 @@
 
 - Deliverable 1: workspace and governance document baseline is complete.
 - Deliverable 2: strict analyzer configuration is complete.
-- Deliverable 3: file-length checker and fixture test is next.
+- Deliverable 3: file-length checker and fixture tests are complete.
+  Review fixes tightened exclusions, generated provenance, line endings,
+  portable path handling, symlink behavior, and deterministic error reporting.
+- Deliverable 4: root verification runner with honest skip reporting is next.
 
 ## Phase 0 Exit Gate
 
