@@ -27,6 +27,12 @@
 - Native compiler toolchain for the later C ABI proof of concept.
 - CI hosts for Linux, macOS, and Windows verification.
 
+## Phase 0 Progress
+
+- Deliverable 1: workspace and governance document baseline is complete.
+- Deliverable 2: strict analyzer configuration is complete.
+- Deliverable 3: file-length checker and fixture test is next.
+
 ## Phase 0 Exit Gate
 
 A clean checkout can run one documented verification command on every initially

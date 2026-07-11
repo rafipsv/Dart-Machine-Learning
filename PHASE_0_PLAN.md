@@ -72,4 +72,18 @@ verification command on every initially supported host OS.
 
 ## Current Deliverable
 
-Deliverable 1: workspace and governance document baseline.
+Deliverable 2: strict analyzer configuration is complete.
+
+## Deliverable 2 Acceptance Criteria
+
+- Central root `analysis_options.yaml` exists.
+- Root and all package skeletons analyze with `dart analyze --fatal-infos`.
+- Warnings and infos are treated as failures by verification commands.
+- No broad excludes, ignores, suppressions, or package-local analyzer overrides
+  are introduced.
+- Focused verification proves the strict config catches a raw generic type.
+- Handwritten Dart, YAML, and configuration files remain under 80 lines.
+
+## Next Deliverable
+
+Deliverable 3: file-length checker and fixture test.

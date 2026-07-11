@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:test/test.dart';
 
-const packages = [
+const List<String> packages = [
   'dart_ml',
   'dart_ml_core',
   'dart_ml_tensor',
@@ -35,6 +35,15 @@ void main() {
       expect(pubspec, contains('name: $package'));
       expect(pubspec, contains('resolution: workspace'));
       expect(pubspec, contains('publish_to: none'));
+    }
+  });
+
+  test('workspace packages inherit root analyzer configuration', () {
+    for (final package in packages) {
+      expect(
+        File('packages/$package/analysis_options.yaml').existsSync(),
+        false,
+      );
     }
   });
 }
