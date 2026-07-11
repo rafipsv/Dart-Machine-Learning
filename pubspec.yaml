@@ -1,0 +1,24 @@
+name: _
+publish_to: none
+
+environment:
+  sdk: ">=3.9.0 <4.0.0"
+
+workspace:
+  - packages/dart_ml
+  - packages/dart_ml_core
+  - packages/dart_ml_tensor
+  - packages/dart_ml_autograd
+  - packages/dart_ml_nn
+  - packages/dart_ml_optim
+  - packages/dart_ml_data
+  - packages/dart_ml_stats
+  - packages/dart_ml_learn
+  - packages/dart_ml_io
+  - packages/dart_ml_onnx
+  - packages/dart_ml_runtime
+  - packages/dart_ml_flutter
+  - packages/dart_ml_cli
+
+dev_dependencies:
+  test: ^1.25.15

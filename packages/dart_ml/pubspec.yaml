@@ -1,0 +1,9 @@
+name: dart_ml
+version: 0.0.0-dev
+publish_to: none
+description: Curated top-level DartML exports.
+
+environment:
+  sdk: ">=3.9.0 <4.0.0"
+
+resolution: workspace

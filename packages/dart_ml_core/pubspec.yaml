@@ -1,0 +1,9 @@
+name: dart_ml_core
+version: 0.0.0-dev
+publish_to: none
+description: Shared DartML contracts, devices, and errors.
+
+environment:
+  sdk: ">=3.9.0 <4.0.0"
+
+resolution: workspace

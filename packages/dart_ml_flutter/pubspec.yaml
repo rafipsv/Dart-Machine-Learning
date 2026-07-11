@@ -1,0 +1,9 @@
+name: dart_ml_flutter
+version: 0.0.0-dev
+publish_to: none
+description: Planned DartML Flutter integration package skeleton.
+
+environment:
+  sdk: ">=3.9.0 <4.0.0"
+
+resolution: workspace
